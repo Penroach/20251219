@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>C</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Auto Loop</h2>
+    <div class="video-container">
+    
+    <video class="video-bg" autoplay loop muted playsinline>
+        <source src="images/bg-sushi.mp4" type="video/mp4">
+        <!-- ブラウザが video に対応していない場合や動画のロードに失敗した場合のみこの画像が表示される -->
+        <img src="images/bg-sushi.jpg" alt="お花畑">
+    </video>
+    </div>
+
+    <h2>Hover Loop</h2>
+    <div class="hover-container">
+    <img class="hover-img" src="images/bg-sushi.jpg" alt="">
+    <video class="hover-video" src="images/bg-sushi.mp4" autoplay loop muted playsinline></video>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>

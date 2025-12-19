@@ -1,0 +1,65 @@
+/* 再生し続ける背景動画 */
+body {
+  /* 1. Set the image path (save your image as 'bg-sushi.jpg') */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/sushi.png');
+  /* 2. Scale the image to cover the entire screen */
+  background-size: cover;
+
+  /* 3. Center the image */
+  background-position: center;
+
+  /* 4. Fix the background so it doesn't move when you scroll (Parallax effect) */
+  background-attachment: fixed;
+
+  /* 5. Ensure text is readable (white text usually looks best on dark backgrounds) */
+  color: #ffffff; 
+  margin: 0;
+  ;
+}
+.video-container {
+  position: relative;
+}
+.video-heading {
+  position: absolute;
+  z-index: 1;
+  background-color: #000;
+  display: inline-block;
+  padding: 1rem;
+  color: #fff;
+}
+.video-bg {
+  /* Change 100% to your preferred size (e.g., 80% or 600px) */
+  width: 80%; 
+  max-width: 800px; /* Optional: Stops it from getting too huge on big screens */
+  
+  height: auto;     /* Keeps the aspect ratio correct */
+  display: block;   /* Allows margin auto to center it */
+  margin: 0 auto 2rem auto; /* Centers the video horizontally */
+}
+
+/* ホバーで動画を再生 */
+.hover-container {
+  position: relative;
+  width: 600px;
+  
+  /* 2. Auto margins on left/right push it to the center */
+  margin: 0 auto;
+}
+.hover-img,
+.hover-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px; 
+  height: auto;
+  display: block;
+}
+/* 初期表示は画像だけ見せる（動画は非表示） */
+.hover-video {
+  display: none;
+}
+h1, h2 {
+  text-align: center;
+}
